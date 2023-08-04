@@ -52,7 +52,8 @@ app.post("/delete-planets", async (req,res)=>{
 
 // Planets List Page - Your Code Goes inside this Route
 app.get("/list-planets", async (req,res)=>{
-    res.render('list-planets'); 
+    let getPlanetToUpdate = await Planet.find();
+    res.render('list-planets', {getPlanetToUpdate}); 
 });
 
 

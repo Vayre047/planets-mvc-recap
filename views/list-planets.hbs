@@ -9,11 +9,13 @@
 <body>
     <div class="div-background-list-planets">
     <!-- Your Code Goes Here ...  -->
+    {{#each getPlanetToUpdate}}
         <div class="div-planet-single-list">
-            <h1 class="planet-heading"><!-- Your Code Goes Here ... --></h1>
-            <img class="planet-img" src="<!-- Your Code Goes Here ... -->"/>
-            <p class="planet-description"><!-- Your Code Goes Here ... --></p>
+            <h1 class="planet-heading">{{name}}</h1>
+            <img class="planet-img" src="{{image}}"/>
+            <p class="planet-description">{{description}}</p>
         </div>
+    {{/each}}
     </div>
 </body>
 </html>
